@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $result = mysqli_query($link, $sql);
         $qry = mysqli_fetch_assoc($result);
         if (password_verify($password, $qry['mdp'])) {
-            session_start();
+           
             $_SESSION["loggedin"] = true;
             $_SESSION["email"] = $email;   
             $_SESSION["type"] = $qry['type'];  
@@ -57,7 +57,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="css/all.min.css">
     <script src="scripts/jquery.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
-    <title>Se connecter - leboncoin</title>
+    <title>Se connecter - find for me</title>
 </head>
 <body>
 

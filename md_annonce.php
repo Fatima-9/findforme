@@ -31,10 +31,9 @@ $nbrannonces = mysqli_num_rows($annresult);
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
-  $sql = "UPDATE `annonces` SET `titre` = '" . $_POST["titre"] . "', `description` = '" . $_POST["textann"] . "', `prix` = '" . $_POST["prix"] . "', `ville` = '" . $_POST["ville"] . "', `secteur` = '" . $_POST["secteur"] . "', `adresse` = '" . $_POST["adresse"] . "', `num` = '" . $_POST["num"] . "', `images` = '" . $_POST["imgs"] . "' WHERE `annonces`.`id_annonce` = " . $_GET['id'] . "";
+  $sql = "UPDATE `annonces` SET `titre` = '" . $_POST["titre"] . "', `description` = '" . $_POST["textann"] . "', `prix` = '" . $_POST["prix"] . "', `ville` = '" . $_POST["ville"] . "', `Code Postal` = '" . $_POST["postal"] . "', `adresse` = '" . $_POST["adresse"] . "', `num` = '" . $_POST["num"] . "', `images` = '" . $_POST["imgs"] . "' WHERE `annonces`.`id_annonce` = " . $_GET['id'] . "";
 
-  echo $sql;
-  //$sql = "INSERT INTO annonces VALUES ('', '" . htmlspecialchars($_SESSION["cin"]) . "' ,'" . $_POST["typean"] . "', '" . $_POST["titre"] . "', '" . $_POST["textann"] . "', '" . $_POST["prix"] . "', '" . $_POST["ville"] . "', '" . $_POST["secteur"] . "', '" . $_POST["adresse"] . "', '" . $_POST["num"] . "', '" . $_POST["etage"] . "', '" . $_POST["chambres"] . "', '" . $_POST["personnes"] . "', '" . $_POST["surface"] . "', '" . $_POST["meuble"] . "', '" . $_POST["cuisine"] . "', '" . $_POST["wifi"] . "', now() , '" . $_POST["autre"] . "', '" . $_POST["imgs"] . "')";
+ 
 
   if(mysqli_query($link, $sql)){
     header("location: mes_annonces.php");
@@ -117,8 +116,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                   <input type="text" value="<?php echo $rs['ville']; ?>" name="ville" class="form-control required">
                 </div>
                 <div class="form-group">
-                  <label for="secteur"><span style="color: rgb(209, 54, 73);">*</span> Secteur</label>
-                  <input type="text" value="<?php echo $rs['secteur']; ?>" name="secteur" class="form-control required">
+                  <label for="postal"><span style="color: rgb(209, 54, 73);">*</span> Code Postal</label>
+                  <input type="text" value="<?php echo $rs['Code Postal']; ?>" name="postal" class="form-control required">
                 </div>
                 <div class="form-group">
                   <label for="Adresse">Adresse</label>

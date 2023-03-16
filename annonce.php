@@ -95,7 +95,7 @@ if (empty($_GET) || mysqli_num_rows($annonce) == 0) {
             <div class="col border-left">
               <h6 class="border-bottom border-gray pb-2 mb-0 font-weight-bold"><i class="fa fa-fw fa-map-marker text-primary"></i> Adresse :</h6>
               <p class="text-muted pt-3">Ville : <?php echo $result['ville']; ?></p>
-              <p class="text-muted">Secteur : <?php echo $result['secteur']; ?></p>
+              <p class="text-muted">Code postal : <?php echo $result['Code Postal']; ?></p>
               <p class="text-muted">Adresse : <?php echo $result['adresse']; ?></p>
             </div>
 
@@ -115,13 +115,10 @@ if (empty($_GET) || mysqli_num_rows($annonce) == 0) {
               </div>
             </div>
           </div>
+          <div class="row justify-content-center">
           
-          
-          <a href="favoris.php?id=<?php echo $result['id_annonce']; ?>"> <button class="btn btn-orange col mx-5 mt-2"><i class="fa fa-star pr-2"></i>Ajouter</button>
-          
-          <a href="favoris.php?id=<?php echo $result['id_annonce']; ?>"> <button class="btn btn-orange col mx-5 mt-2"><i class="fa-solid fa-message"></i>contacter</button>
-          </a>
-        </a>
+          <a href="favoris.php?id=<?php echo $result['id_annonce']; ?>"> <button class="btn btn-orange col mb-2"><i class="fa fa-star pr-2"></i>Ajouter</button> </a>
+            </div>
         </div>
       </div>
     </div>

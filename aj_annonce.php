@@ -14,7 +14,7 @@ $nbrannonces = mysqli_num_rows($annresult);
  
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
-        $sql = "INSERT INTO annonces(`id_user`, `titre`, `description`, `prix`, `ville`, `Code Postal`, `adresse`, `num`, `date_publication`, `autre_details`, `images`) VALUES (" . htmlspecialchars($_SESSION["id"]) . " ,'" . $_POST["titre"] . "', '" . addslashes($_POST["textann"]) . "', '" . $_POST["prix"] . "', '" . $_POST["ville"] . "', '" . $_POST["Code Postal"] . "', '" . $_POST["adresse"] . "', '" . $_POST["num"] . "', now() , '" . $_POST["autre"] . "', '" . $_POST["imgs"] . "')";
+        $sql = "INSERT INTO annonces(`id_user`, `titre`, `description`, `prix`, `ville`, `Code Postal`, `adresse`, `num`, `date_publication`,`images`) VALUES (" . htmlspecialchars($_SESSION["id"]) . " ,'" . $_POST["titre"] . "', '" . addslashes($_POST["textann"]) . "', '" . $_POST["prix"] . "', '" . $_POST["ville"] . "', '" . $_POST["postal"] . "', '" . $_POST["adresse"] . "', '" . $_POST["num"] . "', now() , '" . $_POST["imgs"] . "')";
 
           if(mysqli_query($link, $sql)){
                 header("location: mes_annonces.php");
@@ -95,7 +95,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 </div>
                 <div class="form-group">
                   <label for="Code Postal"><span style="color: rgb(209, 54, 73);">*</span> Code Postal</label>
-                  <input type="text" name="Code Postal" class="form-control required">
+                  <input type="text" name="postal" class="form-control required">
                 </div>
                 <div class="form-group">
                   <label for="Adresse">Adresse</label>

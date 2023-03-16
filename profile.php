@@ -94,7 +94,7 @@ $nbrannonces = mysqli_num_rows($annresult);
         ?>
         <a class="nav-link" href="mes_favoris.php"><i class="fa fa-fw fa-star"></i> Mes favoris</a>
         <a class="nav-link active" href="profile.php"><i class="fa fa-fw fa-user"></i> Mon profile</a>
-        <a class="nav-link" href="messages.php"><i class="fa fa-fw fa-message"></i> Mes messages</a>
+   
 
         <a class="nav-link text-danger font-weight-bold" href="logout.php"><i class="fa fa-fw fa-sign-out-alt"></i> Se deconnecter</a>
       </nav>
