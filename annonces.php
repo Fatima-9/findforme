@@ -95,7 +95,7 @@ $allannonces = mysqli_query($link, $req) or die(mysqli_error($link));;
 
 <main role="main" class="container">
   <div class="row">
-    <div class="my-3 p-3 bg-light rounded col-8">
+    <div class="my-3 p-3 bg-light rounded col-12">
 
       <?php
       if (mysqli_num_rows($allannonces) == 0){ ?>
@@ -132,6 +132,7 @@ $allannonces = mysqli_query($link, $req) or die(mysqli_error($link));;
                     <small class="mb-auto font-weight-light text-muted"><?php echo $row['date']; ?></small>
                   </div>
                 </div><div <?php echo "style='background-image: url(upload/" . $imgs[0] . ")'"  ?> class="mr-lg-4 order-1 order-lg-1 anncimg">
+                
                 </div>
               </li>
             </a>
@@ -150,16 +151,7 @@ $allannonces = mysqli_query($link, $req) or die(mysqli_error($link));;
         <?php }
         ?>
 
-      </div>
-      <div class="my-3 p-3 bg-light col-4 border-1">
-        <div class="card">
-          <h5 class="card-header">Votre publicité ici</h5>
-          <div class="card-body">
-            <img src="images/pub.png">
-          </div>
-        </div>
-      </div>
-    </div>
+      
 
     <script type="text/javascript">
 

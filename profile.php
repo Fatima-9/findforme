@@ -127,11 +127,9 @@ $nbrannonces = mysqli_num_rows($annresult);
               </div>
 
               <div class="form-group row">
-                <label for="ville" class="col-sm-3 col-form-label">Ville</label>
-                <div class="col-sm-9">
-                  <select class="custom-select" id="locality-dropdown" name='ville'>
-
-                  </select>
+              <label for="ville" class="col-sm-3 col-form-label">ville</label>
+              <div class="col-sm-9">
+              <input type="ville" class="form-control" name="ville" id="ville" value="<?php echo $row['ville']; ?>" required>
                 </div>
               </div>
 
